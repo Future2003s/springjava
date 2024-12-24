@@ -1,17 +1,3 @@
-server:
-  port: 8081
-
 spring:
-  application:
-    name: training
-  datasource:
-    url: jdbc:mysql://localhost:3306/advanced
-    username: root
-    password: 123456789
-    driver-class-name: com.mysql.cj.jdbc.Driver
-  jpa:
-    show-sql: true
-    hibernate:
-      ddl-auto: update
-
-
+  profiles:
+    active: dev
