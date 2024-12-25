@@ -19,6 +19,7 @@ import java.util.Date;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class UserEntity {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
     @Column(columnDefinition = "varchar(255) comment 'first name'", name = "firstName")
@@ -34,7 +35,7 @@ public class UserEntity {
     String phone;
 
     @Column(name = "usr_dateOfBirth")
-    @Temporal(TemporalType.TIMESTAMP)
+    @Temporal(TemporalType.DATE)
     Date dateOfBirth;
 
 
