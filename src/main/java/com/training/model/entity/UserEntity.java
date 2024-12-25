@@ -17,10 +17,7 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class UserEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
+public class UserEntity extends AbstractEntity {
 
     @Column(columnDefinition = "varchar(255) comment 'first name'", name = "firstName")
     String firstName;
@@ -38,10 +35,4 @@ public class UserEntity {
     @Temporal(TemporalType.DATE)
     Date dateOfBirth;
 
-
-    @CreationTimestamp
-    String createdAt;
-
-    @UpdateTimestamp
-    String updatedAt;
 }

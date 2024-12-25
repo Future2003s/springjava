@@ -1,10 +1,10 @@
 package com.training.model.entity;
 
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
-import org.springframework.boot.sql.init.dependency.DependsOnDatabaseInitialization;
 
 @Entity
 @Getter
@@ -14,11 +14,7 @@ import org.springframework.boot.sql.init.dependency.DependsOnDatabaseInitializat
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Table(name = "tbl_address")
-public class AddressEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
-
+public class AddressEntity extends AbstractEntity {
     String apartmentNumber;
 
     String floor;
