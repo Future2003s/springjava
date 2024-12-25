@@ -1,13 +1,15 @@
 package com.training.exception;
 
-import lombok.Builder;
+
+import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.experimental.FieldDefaults;
 
+@FieldDefaults(level = AccessLevel.PRIVATE)
 @Setter
 @Getter
-@Builder
 public class ErrorResponse {
-    private int code;
-    private String message;
+    int code;
+    String message;
 }

@@ -17,25 +17,24 @@ import java.util.Date;
 public class UserRequestDTO implements Serializable {
 
     @NotEmpty(message = "first Name can not empty")
-    @Size(min = 5,message = "first Name Minimum 5 character")
+    @Size(min = 5, message = "first Name Minimum 5 character")
     private String firstName;
 
     @NotEmpty(message = "last name can not empty")
-    @Size(min = 5,message = "last name Minimum 5 character")
+    @Size(min = 5, message = "last name Minimum 5 character")
     private String lastName;
 
     @NotEmpty(message = "email can not empty")
-    @Size(min = 5,message = "email Minimum 5 character")
+    @Size(min = 5, message = "email Minimum 5 character")
     private String email;
 
     @NotEmpty(message = "phone can not empty")
-    @Size(max = 10,message = "phone maximum 10 number")
-    @Size(min = 10,message = "phone Minimum 10 number")
-    private  String phone;
+    @Size(min = 10, max = 10, message = "phone must be exactly 10 characters")
+    private String phone;
 
     @NotNull(message = "date of birth must be not null")
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
-    @JsonFormat(pattern = "DD/MM/YYYY")
+    @JsonFormat(pattern = "dd/MM/yyyy")
     private Date dateOfBirth;
 
 }
