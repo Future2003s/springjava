@@ -1,4 +1,7 @@
 package com.training.dto.request;
 
-public class AddressDTO {
+import java.io.Serializable;
+
+public class AddressDTO implements Serializable {
+
 }
