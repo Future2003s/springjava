@@ -5,4 +5,6 @@ import com.training.model.entity.UserEntity;
 
 public interface UserService {
     UserEntity createUser(UserRequestDTO requestUser);
+
+    UserEntity findByUserEmail(String email);
 }

@@ -7,11 +7,13 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.FieldDefaults;
 
+import java.io.Serializable;
+
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Setter
 @Getter
 @Builder
-public class ErrorResponse {
+public class ErrorResponse implements Serializable {
     int code;
     String message;
 }

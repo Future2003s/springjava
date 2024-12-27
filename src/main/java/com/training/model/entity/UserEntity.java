@@ -8,6 +8,8 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "tbl_usr")
@@ -25,8 +27,9 @@ public class UserEntity extends AbstractEntity {
     @Column(name = "usr_lastName")
     String lastName;
 
-    @Column(name = "usr_email")
-    String email;
+
+    @Column(unique = true)
+    String userEmail;
 
     @Column(name = "usr_phone")
     String phone;
@@ -34,5 +37,9 @@ public class UserEntity extends AbstractEntity {
     @Column(name = "usr_dateOfBirth")
     @Temporal(TemporalType.DATE)
     Date dateOfBirth;
+
+
+//    @OneToMany(mappedBy = "user", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+//    Set<AddressEntity> address;
 
 }

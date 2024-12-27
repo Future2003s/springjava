@@ -1,10 +1,9 @@
 package com.training.model.entity;
 
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
+import org.jetbrains.annotations.NotNull;
 
 @Entity
 @Getter
@@ -30,4 +29,8 @@ public class AddressEntity extends AbstractEntity {
     String country;
 
     Integer addressType;
+
+//    @ManyToOne(fetch = FetchType.EAGER)
+//    @JoinColumn(name = "userId")
+//    UserEntity user;
 }
