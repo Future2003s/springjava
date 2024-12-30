@@ -1,6 +1,7 @@
 package com.training.dto.request;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.training.util.PhoneNumber;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
@@ -32,6 +33,7 @@ public class UserRequestDTO implements Serializable {
 
     @NotEmpty(message = "phone can not empty")
     @Size(min = 10, max = 10, message = "phone must be exactly 10 characters")
+    @PhoneNumber(message = "")
     private String phone;
 
     @NotNull(message = "date of birth must be not null")
