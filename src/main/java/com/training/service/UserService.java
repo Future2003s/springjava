@@ -7,4 +7,6 @@ public interface UserService {
     UserEntity createUser(UserRequestDTO requestUser);
 
     UserEntity findByUserEmail(String email);
+
+    boolean existsEmail(String email);
 }
